@@ -1,0 +1,19 @@
+---
+title: "Electricity Demand Forecasting"
+description: "Time-series forecasting model to predict power grid load and optimize energy distribution."
+date: "2025-11-10"
+tags: ["Python", "Time Series", "ARIMA", "Prophet", "Pandas"]
+githubUrl: "https://github.com/007ash/Electricity-Demand-Forecasting"
+liveUrl: ""
+featured: true
+---
+
+# Overview
+
+Grid stability relies on highly accurate load forecasting. Overestimating demand leads to wasted energy and higher costs, while underestimating causes brownouts. This project builds a robust time-series forecasting pipeline to predict electricity demand based on historical usage and external regressors.
+
+## The Architecture
+
+* **Data Processing:** Cleaned and resampled high-frequency grid data using `pandas`, handling missing values and anomalies in the time-series.
+* **Modeling:** Evaluated multiple forecasting algorithms, including classical statistical methods (ARIMA) and modern additive models (Facebook Prophet).
+* **Evaluation:** Optimized for Mean Absolute Percentage Error (MAPE) to ensure high reliability across both peak and off-peak hours.

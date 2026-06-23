@@ -1,0 +1,18 @@
+---
+title: "Recipe Archaeologist"
+description: "An NLP-powered tool that extracts, structures, and categorizes recipe data from unstructured text."
+date: "2025-08-22"
+tags: ["NLP", "Python", "BeautifulSoup", "Spacy", "Data Extraction"]
+githubUrl: "https://github.com/007ash/Recipe-Archaeologist"
+liveUrl: ""
+featured: false
+---
+
+# Overview
+
+Food blogs and historical texts are notorious for burying recipes under paragraphs of unstructured narrative. *Recipe Archaeologist* acts as a targeted extraction engine, parsing raw text and outputting clean, structured JSON containing ingredients, measurements, and step-by-step instructions.
+
+## The Architecture
+
+* **Scraping & Parsing:** Utilized `BeautifulSoup` to navigate DOM trees and strip away boilerplate web content.
+* **Natural Language Processing:** Implemented `Spacy` for Named Entity Recognition (NER) to identify quantities, units, and food items, successfully converting colloquial measurements into standardized data formats.

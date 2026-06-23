@@ -1,0 +1,20 @@
+---
+title: "GreenRoute: Carbon-Optimized Travel Planner"
+description: "A machine-learning-driven transit planner estimating real-time CO2 emissions for urban routes."
+date: "2026-03-15"
+tags: ["Python", "FastAPI", "Machine Learning", "OSRM", "Next.js"]
+githubUrl: "https://github.com/007ash/Green-Route"
+liveUrl: ""
+featured: true
+---
+
+# Overview
+
+Urban transit optimization typically solves for a single variable: *time*. GreenRoute introduces a multi-objective routing algorithm that calculates the carbon cost of a trip alongside its duration.
+
+## The Architecture
+
+To achieve sub-200ms route calculations, the backend relies on an instance of the **Open Source Routing Machine (OSRM)** bound to a **FastAPI** service. 
+
+* **The Data Ingestion:** We map coordinate matrices via `GeoPy`.
+* **The Emission Model:** A custom regression model trained on local municipal transit data predicts grams of $CO_2$ per passenger-kilometer based on real-time traffic density.
