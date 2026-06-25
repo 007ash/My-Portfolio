@@ -6,5 +6,6 @@ export default function AboutPage() {
         Placeholder for your professional background, engineering philosophy, and the human element behind the code.
       </p>
     </main>
+    
   );
 }
