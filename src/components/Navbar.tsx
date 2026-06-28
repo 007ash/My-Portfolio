@@ -10,8 +10,10 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"; // Ensure acce
 const routes = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Experience", path: "/experience" },
+  { name: "Skills", path: "/skills" },
   { name: "Projects", path: "/projects" },
-  { name: "Contact", path: "/contact" },
+  { name: "Resume", path: "/resume" },
 ];
 
 export function Navbar() {
