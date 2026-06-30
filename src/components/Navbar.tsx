@@ -14,6 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const routes = [
   { name: "Home", path: "/" },
@@ -29,7 +30,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full glass border-b-0 border-white/5">
+    <header className="sticky top-0 z-50 w-full glass border-b border-border/40">
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         {/* Logo / Brand */}
         <Link
@@ -55,13 +56,13 @@ export function Navbar() {
                 href={route.path}
                 className={cn(
                   "relative px-4 py-2 transition-colors duration-200 hover:text-foreground",
-                  isActive ? "text-foreground" : "text-foreground/60",
+                  isActive ? "text-foreground" : "text-muted-foreground",
                 )}
               >
                 {isActive && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute inset-0 bg-white/5 rounded-md"
+                    className="absolute inset-0 bg-primary/10 dark:bg-white/5 rounded-md"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -69,7 +70,8 @@ export function Navbar() {
               </Link>
             );
           })}
-          <div className="ml-4 pl-4 border-l border-white/10">
+          <div className="ml-4 pl-4 flex items-center space-x-2 border-l border-border/40">
+            <ThemeToggle />
             <Button
               asChild
               variant="default"
@@ -90,11 +92,14 @@ export function Navbar() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="glass border-l-white/10">
+            <SheetContent side="right" className="glass border-l-border/40">
               <VisuallyHidden>
                 <SheetTitle>Navigation Menu</SheetTitle>
               </VisuallyHidden>
-              <nav className="flex flex-col gap-4 mt-8">
+              <div className="mt-8 flex justify-end">
+                <ThemeToggle />
+              </div>
+              <nav className="flex flex-col gap-4 mt-4">
                 {routes.map((route) => {
                   const isActive = pathname === route.path;
                   return (
@@ -106,7 +111,7 @@ export function Navbar() {
                         "block px-4 py-3 rounded-lg text-lg font-medium transition-colors",
                         isActive
                           ? "bg-primary/10 text-primary"
-                          : "hover:bg-white/5 text-foreground/80 hover:text-foreground",
+                          : "hover:bg-primary/5 text-muted-foreground hover:text-foreground",
                       )}
                     >
                       {route.name}

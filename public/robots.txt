@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ashwanth.dev
+
+# Sitemaps
+Sitemap: https://ashwanth.dev/sitemap.xml

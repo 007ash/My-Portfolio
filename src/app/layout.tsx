@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 // We use Inter for a clean, modern, sans-serif look for body text
 const inter = Inter({
@@ -16,9 +17,28 @@ const outfit = Outfit({
   variable: "--font-heading",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Ashwanth | Full-Stack Developer",
-  description: "Portfolio and technical case studies by Ashwanth.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Ashwanth | Full-Stack Developer",
+    template: "%s | Ashwanth",
+  },
+  description: "Portfolio and technical case studies by Ashwanth. Building intelligent systems and high-performance web applications.",
+  openGraph: {
+    title: "Ashwanth | Full-Stack Developer",
+    description: "Portfolio and technical case studies by Ashwanth.",
+    url: siteUrl,
+    siteName: "Ashwanth.dev",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashwanth | Full-Stack Developer",
+    description: "Portfolio and technical case studies by Ashwanth.",
+  },
 };
 
 export default function RootLayout({
@@ -27,14 +47,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
         className={`${inter.variable} ${outfit.variable} font-sans min-h-screen flex flex-col bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground`}
       >
-        <Navbar />
-        {/* Main dynamically renders whatever page the user is currently on */}
-        <main className="flex-1 flex flex-col">{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {/* Main dynamically renders whatever page the user is currently on */}
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
