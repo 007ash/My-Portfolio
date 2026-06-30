@@ -3,11 +3,10 @@ import {
   BrainCircuit,
   Code2,
   ExternalLink,
-  Github,
-  Linkedin,
   Mail,
   Terminal,
 } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -93,7 +92,7 @@ export default function Home() {
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1"
             >
-              <Github className="h-6 w-6" />
+              <FaGithub className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
@@ -101,7 +100,7 @@ export default function Home() {
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1"
             >
-              <Linkedin className="h-6 w-6" />
+              <FaLinkedin className="h-6 w-6" />
               <span className="sr-only">LinkedIn</span>
             </Link>
           </FadeIn>
@@ -263,7 +262,7 @@ export default function Home() {
                             target="_blank"
                             className="text-muted-foreground hover:text-foreground transition-colors"
                           >
-                            <Github className="h-5 w-5" />
+                            <FaGithub className="h-5 w-5" />
                           </Link>
                         )}
                         {project.liveUrl && (
