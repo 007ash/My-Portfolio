@@ -38,17 +38,17 @@ const skillCategories = [
 const certificates = [
   {
     id: "cert-1",
-    title: "Deep Learning Specialization",
+    title: "Machine Learning Specialization",
     issuer: "Coursera / DeepLearning.AI",
     date: "Aug 2024",
-    image: "/certificates/ai-certification.jpg", // Update this to match your actual file name
+    image: "/certificates/machine-learning-certification.jpg", // Update this to match your actual file name
   },
   {
     id: "cert-2",
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services",
+    title: "Python for Everybody Specialization",
+    issuer: "Infosys Springboard",
     date: "Jan 2025",
-    image: "/certificates/ai-certification.jpg", // Update this to match your actual file name
+    image: "/certificates/python-certification.jpg", // Update this to match your actual file name
   },
 ];
 
