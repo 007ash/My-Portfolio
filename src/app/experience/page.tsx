@@ -77,7 +77,7 @@ export default function ExperiencePage() {
           {experiences.map((exp) => (
             <div key={exp.id} className="relative flex flex-col gap-2">
               {/* Timeline Node */}
-              <div className="absolute -left-[43px] top-1 bg-background border-2 border-primary rounded-full p-1.5">
+              <div className="absolute -left-10.75 top-1 bg-background border-2 border-primary rounded-full p-1.5">
                 {exp.icon}
               </div>
 
@@ -105,7 +105,7 @@ export default function ExperiencePage() {
           {achievements.map((ach) => (
             <div key={ach.id} className="relative flex flex-col gap-2">
               {/* Timeline Node */}
-              <div className="absolute -left-[43px] top-1 bg-background border-2 border-muted-foreground/30 rounded-full p-1.5 text-muted-foreground">
+              <div className="absolute -left-10.75 top-1 bg-background border-2 border-muted-foreground/30 rounded-full p-1.5 text-muted-foreground">
                 {ach.icon}
               </div>
 
