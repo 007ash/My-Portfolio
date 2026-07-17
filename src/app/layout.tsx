@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { BackToTop } from "@/components/ui/back-to-top";
 
 // We use Inter for a clean, modern, sans-serif look for body text
 const inter = Inter({
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
     default: "Ashwanth | Full-Stack Developer",
     template: "%s | Ashwanth",
   },
-  description: "Portfolio and technical case studies by Ashwanth. Building intelligent systems and high-performance web applications.",
+  description:
+    "Portfolio and technical case studies by Ashwanth. Building intelligent systems and high-performance web applications.",
   openGraph: {
     title: "Ashwanth | Full-Stack Developer",
     description: "Portfolio and technical case studies by Ashwanth.",
@@ -61,6 +63,7 @@ export default function RootLayout({
           {/* Main dynamically renders whatever page the user is currently on */}
           <main className="flex-1 flex flex-col">{children}</main>
           <Footer />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

@@ -27,10 +27,13 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <FadeIn key={project.slug} delay={index * 0.1}>
-            <Link href={`/projects/${project.slug}`} className="group h-full flex">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="group h-full flex"
+            >
               <div className="glass-card rounded-xl p-8 flex flex-col gap-4 w-full relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-                
+
                 <div className="relative z-10 flex flex-col h-full">
                   <h2 className="text-2xl font-semibold font-heading mb-2 group-hover:text-primary transition-colors">
                     {project.title}
@@ -38,7 +41,7 @@ export default function ProjectsPage() {
                   <p className="text-muted-foreground line-clamp-3 mb-6">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex gap-2 flex-wrap mt-auto mb-6">
                     {project.tags.slice(0, 3).map((tag) => (
                       <span

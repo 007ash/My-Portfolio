@@ -1,7 +1,16 @@
-import { Briefcase, Code, Presentation, Rocket, Trophy } from "lucide-react";
+import {
+  ArrowRight,
+  Briefcase,
+  Code,
+  Presentation,
+  Rocket,
+  Trophy,
+} from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { FadeIn } from "@/components/ui/fade-in";
 
-// 1. Professional Experience Data
 const experiences = [
   {
     id: "exp-1",
@@ -14,7 +23,6 @@ const experiences = [
   },
 ];
 
-// 2. Hackathons & Achievements Data
 const achievements = [
   {
     id: "ach-1",
@@ -54,75 +62,110 @@ const achievements = [
   },
 ];
 
-export default function ExperiencePage() {
+export function ExperienceSection() {
   return (
-    <main className="container mx-auto py-16 px-6 max-w-4xl flex flex-col gap-16">
+    <section
+      id="experience"
+      className="container mx-auto py-24 px-6 max-w-4xl flex flex-col gap-16"
+    >
       {/* Header Section */}
-      <section className="flex flex-col gap-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+      <FadeIn className="flex flex-col gap-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
           Experience & Milestones
-        </h1>
+        </h2>
         <p className="text-muted-foreground text-lg max-w-2xl">
           A timeline of my professional roles, competitive programming
           achievements, and hackathon sprints.
         </p>
-      </section>
+      </FadeIn>
 
       {/* Experience Timeline */}
-      <section className="flex flex-col gap-8">
-        <h2 className="text-2xl font-bold border-b pb-2">
-          Professional Experience
-        </h2>
+      <div className="flex flex-col gap-8">
+        <FadeIn>
+          <h3 className="text-2xl font-bold border-b pb-2">
+            Professional Experience
+          </h3>
+        </FadeIn>
         <div className="flex flex-col gap-8 border-l-2 border-muted ml-3 pl-8 relative">
-          {experiences.map((exp) => (
-            <div key={exp.id} className="relative flex flex-col gap-2">
+          {experiences.map((exp, idx) => (
+            <FadeIn
+              key={exp.id}
+              delay={idx * 0.15}
+              direction="up"
+              className="relative flex flex-col gap-2"
+            >
               {/* Timeline Node */}
               <div className="absolute -left-10.75 top-1 bg-background border-2 border-primary rounded-full p-1.5">
                 {exp.icon}
               </div>
 
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <h3 className="text-xl font-bold">{exp.role}</h3>
+                <h4 className="text-xl font-bold">{exp.role}</h4>
                 <Badge variant="outline" className="w-fit">
                   {exp.date}
                 </Badge>
               </div>
-              <h4 className="text-primary font-medium">{exp.company}</h4>
+              <h5 className="text-primary font-medium">{exp.company}</h5>
               <p className="text-muted-foreground mt-2 leading-relaxed">
                 {exp.description}
               </p>
-            </div>
+            </FadeIn>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* Achievements Timeline */}
-      <section className="flex flex-col gap-8">
-        <h2 className="text-2xl font-bold border-b pb-2">
-          Hackathons & Achievements
-        </h2>
+      <div className="flex flex-col gap-8">
+        <FadeIn className="flex justify-between items-end border-b pb-2">
+          <h3 className="text-2xl font-bold">Hackathons & Achievements</h3>
+          <Button
+            asChild
+            variant="ghost"
+            className="hidden sm:flex rounded-full hover:bg-white/5 h-auto py-1 px-3"
+          >
+            <Link href="/achievements" className="text-sm">
+              View More <ArrowRight className="ml-2 h-3 w-3" />
+            </Link>
+          </Button>
+        </FadeIn>
         <div className="flex flex-col gap-10 border-l-2 border-muted ml-3 pl-8 relative">
-          {achievements.map((ach) => (
-            <div key={ach.id} className="relative flex flex-col gap-2">
+          {achievements.map((ach, idx) => (
+            <FadeIn
+              key={ach.id}
+              delay={idx * 0.15}
+              direction="up"
+              className="relative flex flex-col gap-2"
+            >
               {/* Timeline Node */}
               <div className="absolute -left-10.75 top-1 bg-background border-2 border-muted-foreground/30 rounded-full p-1.5 text-muted-foreground">
                 {ach.icon}
               </div>
 
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <h3 className="text-xl font-bold">{ach.title}</h3>
+                <h4 className="text-xl font-bold">{ach.title}</h4>
                 <Badge variant="outline" className="w-fit">
                   {ach.date}
                 </Badge>
               </div>
-              <h4 className="text-foreground font-medium">{ach.role}</h4>
+              <h5 className="text-foreground font-medium">{ach.role}</h5>
               <p className="text-muted-foreground mt-1 leading-relaxed">
                 {ach.description}
               </p>
-            </div>
+            </FadeIn>
           ))}
         </div>
-      </section>
-    </main>
+
+        {/* Mobile View More Button */}
+        <Button
+          asChild
+          variant="outline"
+          className="w-full mt-2 sm:hidden rounded-full glass"
+        >
+          <Link href="/achievements">
+            View More Achievements <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
+    </section>
   );
 }

@@ -61,7 +61,7 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
       <FadeIn delay={0.1}>
         <header className="mb-16 glass rounded-2xl p-8 md:p-12 border border-border/40 relative overflow-hidden">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/20 rounded-full blur-[100px]" />
-          
+
           <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-heading font-bold tracking-tight mb-6 text-foreground">
               {project.title}
@@ -69,7 +69,7 @@ export default async function ProjectCaseStudyPage({ params }: Props) {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
               {project.description}
             </p>
-            
+
             <div className="flex gap-2 flex-wrap mb-8">
               {project.tags.map((tag) => (
                 <span

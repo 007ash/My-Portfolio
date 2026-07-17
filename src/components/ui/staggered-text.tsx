@@ -58,6 +58,7 @@ export function StaggeredText({
         <motion.span
           variants={child}
           style={{ marginRight: "0.25em" }}
+          // biome-ignore lint/suspicious/noArrayIndexKey: Static text splitting
           key={`${word}-${index}`}
         >
           {word}

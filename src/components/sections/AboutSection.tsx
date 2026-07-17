@@ -1,23 +1,30 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { FadeIn } from "@/components/ui/fade-in";
 
-export default function AboutPage() {
+export function AboutSection() {
   return (
-    <main className="container mx-auto py-16 px-6 max-w-4xl flex flex-col gap-12">
+    <section
+      id="about"
+      className="container mx-auto py-24 px-6 max-w-4xl flex flex-col gap-12"
+    >
       {/* Header Section */}
-      <section className="flex flex-col gap-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+      <FadeIn className="flex flex-col gap-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
           About Me
-        </h1>
+        </h2>
         <div className="h-1 w-20 bg-primary rounded-full"></div>
-      </section>
+      </FadeIn>
 
       {/* Main Content Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
         {/* Left Column: Image & Quick Stats */}
-        <div className="flex flex-col gap-6 md:col-span-1">
+        <FadeIn
+          direction="up"
+          delay={0.2}
+          className="flex flex-col gap-6 md:col-span-1"
+        >
           <div className="relative w-full aspect-square rounded-2xl overflow-hidden border bg-muted">
-            {/* You can use a different photo here, or reuse the profile.jpg */}
             <Image
               src="/profile.jpg"
               alt="Ashwanth working"
@@ -34,14 +41,18 @@ export default function AboutPage() {
               Sri Ramakrishna Engineering College
             </p>
           </div>
-        </div>
+        </FadeIn>
 
         {/* Right Column: Biography & Leadership */}
-        <div className="flex flex-col gap-8 md:col-span-2 text-lg text-muted-foreground leading-relaxed">
+        <FadeIn
+          direction="up"
+          delay={0.4}
+          className="flex flex-col gap-8 md:col-span-2 text-lg text-muted-foreground leading-relaxed"
+        >
           <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold text-foreground">
+            <h3 className="text-2xl font-bold text-foreground">
               Engineering with Purpose
-            </h2>
+            </h3>
             <p>
               I am a Computer Science and Engineering student pursuing an Honors
               specialization in Artificial Intelligence and Machine Learning
@@ -58,9 +69,9 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold text-foreground">
+            <h3 className="text-2xl font-bold text-foreground">
               Leadership & Community
-            </h2>
+            </h3>
             <p>
               Beyond the code editor, I am deeply involved in fostering
               technical communities. I currently serve as the{" "}
@@ -89,8 +100,8 @@ export default function AboutPage() {
               Explainable AI
             </Badge>
           </div>
-        </div>
-      </section>
-    </main>
+        </FadeIn>
+      </div>
+    </section>
   );
 }
