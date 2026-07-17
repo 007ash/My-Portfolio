@@ -18,8 +18,8 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 const routes = [
   { name: "Home", path: "#home" },
   { name: "About", path: "#about" },
-  { name: "Experience", path: "#experience" },
   { name: "Skills", path: "#skills" },
+  { name: "Experience", path: "#experience" },
   { name: "Projects", path: "#projects" },
   { name: "Resume", path: "#resume" },
 ];
