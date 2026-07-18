@@ -33,8 +33,8 @@ export function HeroSection() {
         </FadeIn>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight font-heading">
-          <StaggeredText text="Hi, I'm Ashwanth." delay={0.2} />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 block mt-2">
+          <StaggeredText text="Hi, I'm Ashwanth SenthilKumar" delay={0.2} />
+          <span >
             <FadeIn delay={0.8} direction="up">
               I build intelligent systems.
             </FadeIn>
@@ -75,7 +75,7 @@ export function HeroSection() {
         {/* Social Links */}
         <FadeIn delay={1.4} className="flex gap-6 mt-12">
           <Link
-            href="https://github.com/yourusername"
+            href="https://github.com/007ash"
             target="_blank"
             className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1"
           >
@@ -83,7 +83,7 @@ export function HeroSection() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/ashwanth-senthilkumar"
             target="_blank"
             className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1"
           >
