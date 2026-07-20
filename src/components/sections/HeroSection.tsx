@@ -99,20 +99,28 @@ export function HeroSection() {
         direction="left"
         className="relative shrink-0 mb-10 md:mb-0"
       >
-        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px]">
+        <div className="relative isolate w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px]">
           {/* Decorative Ring */}
-          <div className="absolute inset-0 rounded-full border border-primary/30 scale-105 animate-[spin_10s_linear_infinite] pointer-events-none" />
-          <div className="absolute inset-0 rounded-full border border-dashed border-white/20 scale-110 animate-[spin_15s_linear_infinite_reverse] pointer-events-none" />
+          <div className="hero-hexagon-backdrop absolute inset-0 pointer-events-none z-0" />
+          <div className="hero-hexagon-ring absolute inset-0 border-[2px] border-primary/30 scale-105 animate-[spin_10s_linear_infinite] pointer-events-none z-20" />
+          <div className="hero-hexagon-ring hero-hexagon-ring-dashed absolute inset-3 border-[2px] border-dashed border-white/25 scale-110 animate-[spin_15s_linear_infinite_reverse] pointer-events-none z-20" />
 
-          <div className="w-full h-full rounded-full overflow-hidden border-4 border-background/50 shadow-2xl relative z-10 glass">
-            <Image
-              src="/profile.jpg"
-              alt="Ashwanth Senthilkumar"
-              fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
-              priority
-            />
+          <div className="hero-hexagon-wrapper w-72 h-72 md:w-80 md:h-80 cursor-pointer group">
+          {/* Ambient breathing glow behind the hexagon */}
+          <div className="hero-hexagon-backdrop transition-duration-700 group-hover:opacity-100 group-hover:scale-110" />
+
+          <div className="hero-hexagon-shell group-hover:scale-[1.02] transition-transform duration-500">
+            <div className="hero-hexagon-image">
+              <Image
+                src="/profile .png"
+                alt="Ashwanth Senthilkumar"
+                fill
+                className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-105"
+                priority
+              />
+            </div>
           </div>
+        </div>
         </div>
       </FadeIn>
     </section>
