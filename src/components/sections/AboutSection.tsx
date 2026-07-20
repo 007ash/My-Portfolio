@@ -35,7 +35,7 @@ export function AboutSection() {
           <div className="flex flex-col gap-2">
             <h3 className="font-semibold text-lg">Current Status</h3>
             <p className="text-muted-foreground text-sm">
-              3rd-Year CSE Undergraduate
+              Final year CSE Undergraduate
             </p>
             <p className="text-muted-foreground text-sm">
               Sri Ramakrishna Engineering College
@@ -54,18 +54,20 @@ export function AboutSection() {
               Engineering with Purpose
             </h3>
             <p>
-              I am a Computer Science and Engineering student pursuing an Honors
-              specialization in Artificial Intelligence and Machine Learning
-              (AI/ML). My engineering philosophy is built around a simple
-              concept: machine learning should not be a black box.
+              I am a final-year Computer Science and Engineering student with an Honors specialization in Artificial Intelligence and Machine Learning. I am dedicated to building intelligent, full-stack software solutions that bridge the gap between complex AI systems and real-world application. 
             </p>
             <p>
-              I have a strong, sustained focus on Explainable AI (XAI), Computer
-              Vision, and full-stack development. I enjoy taking complex
-              algorithmic concepts—whether it is calculating real-time CO2
-              emissions for urban transit or implementing image segmentation—and
-              deploying them into performant, user-friendly web applications.
+              Driven by an end-to-end approach to software engineering, I focus on turning complex technical challenges—from computer vision pipelines to scalable backend systems—into production-ready products.
             </p>
+            <p>
+              ✨ <strong>Production Over Theory</strong>: Turning ideas into functional, real-world software solutions.
+            </p>
+            <p>
+              🤝 <strong>Collaborative Growth</strong>: Driving innovation through teamwork and technical leadership.
+            </p>
+            <p>
+              💡 <strong>Continuous Iteration</strong>: Learning by building, failing, optimizing, and scaling.
+            </p>  
           </div>
 
           <div className="flex flex-col gap-4">
@@ -81,22 +83,19 @@ export function AboutSection() {
               </strong>{" "}
               at Sri Ramakrishna Engineering College.
             </p>
-            <p>
-              Additionally, as an{" "}
-              <strong>Executive Member of the IEEE Computer Society</strong>, I
-              work to bridge the gap between academic theory and
-              industry-standard engineering practices for my peers.
-            </p>
           </div>
 
           <div className="flex gap-3 flex-wrap mt-2">
-            <Badge variant="secondary" className="text-sm py-1">
+            <Badge variant="secondary" className="text-sm py-3">
               AI/ML Honors
             </Badge>
-            <Badge variant="secondary" className="text-sm py-1">
+            <Badge variant="secondary" className="text-sm py-3">
+              Data Science
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-3">
               IEEE CIS Chairperson
             </Badge>
-            <Badge variant="secondary" className="text-sm py-1">
+            <Badge variant="secondary" className="text-sm py-3">
               Explainable AI
             </Badge>
           </div>
