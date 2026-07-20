@@ -105,22 +105,23 @@ export function HeroSection() {
           <div className="hero-hexagon-ring absolute inset-0 border-[2px] border-primary/30 scale-105 animate-[spin_10s_linear_infinite] pointer-events-none z-20" />
           <div className="hero-hexagon-ring hero-hexagon-ring-dashed absolute inset-3 border-[2px] border-dashed border-white/25 scale-110 animate-[spin_15s_linear_infinite_reverse] pointer-events-none z-20" />
 
-          <div className="hero-hexagon-wrapper w-72 h-72 md:w-80 md:h-80 cursor-pointer group">
-          {/* Ambient breathing glow behind the hexagon */}
-          <div className="hero-hexagon-backdrop transition-duration-700 group-hover:opacity-100 group-hover:scale-110" />
+          <div className="hero-hexagon-wrapper relative w-full h-full cursor-pointer group">
+            {/* Ambient breathing glow behind the hexagon */}
+            <div className="hero-hexagon-backdrop transition-duration-700 group-hover:opacity-100 group-hover:scale-110" />
 
-          <div className="hero-hexagon-shell group-hover:scale-[1.02] transition-transform duration-500">
-            <div className="hero-hexagon-image">
-              <Image
-                src="/profile .png"
-                alt="Ashwanth Senthilkumar"
-                fill
-                className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-105"
-                priority
-              />
+            <div className="hero-hexagon-shell relative w-full h-full transition-transform duration-500">
+              <div className="hero-hexagon-image relative w-full h-full overflow-hidden m-auto p-1 rounded-[45%] bg-gradient-to-tr from-primary/10 to-primary/30 shadow-lg shadow-primary/25 group-hover:scale-105 transition-transform duration-700">
+                <Image
+                  src="/profile .png"
+                  alt="Ashwanth Senthilkumar"
+                  fill
+                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 400px"
+                  className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-105"
+                  priority
+                />
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </FadeIn>
     </section>

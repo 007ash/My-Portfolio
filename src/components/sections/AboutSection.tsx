@@ -29,6 +29,7 @@ export function AboutSection() {
               src="/aboutSection.jpg"
               alt="Ashwanth Profile Picture"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
           </div>
