@@ -24,10 +24,10 @@ export function AboutSection() {
           delay={0.2}
           className="flex flex-col gap-6 md:col-span-1"
         >
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden border bg-muted">
+          <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border bg-muted">
             <Image
-              src="/profile.jpg"
-              alt="Ashwanth working"
+              src="/aboutSection.jpg"
+              alt="Ashwanth Profile Picture"
               fill
               className="object-cover"
             />
