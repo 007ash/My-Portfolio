@@ -86,17 +86,26 @@ export function AboutSection() {
           </div>
 
           <div className="flex gap-3 flex-wrap mt-2">
-            <Badge variant="secondary" className="text-sm py-3">
-              AI/ML Honors
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-3">
-              Data Science
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-3">
+            <Badge variant="secondary" className="text-sm py-3 px-3">
               IEEE CIS Chairperson
             </Badge>
-            <Badge variant="secondary" className="text-sm py-3">
+            <Badge variant="secondary" className="text-sm py-3 px-3">
+              AI/ML Honors
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-3 px-3">
+              Data Science
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-3 px-3">
+              LLM
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-3 px-3">
               Explainable AI
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-3 px-3">
+              Generative AI
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-3 px-3">
+              Cloud Computing
             </Badge>
           </div>
         </FadeIn>
