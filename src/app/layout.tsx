@@ -23,13 +23,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ashwanth | Full-Stack Developer",
+    default: "Ashwanth | AI/ML Developer",
     template: "%s | Ashwanth",
   },
   description:
     "Portfolio and technical case studies by Ashwanth. Building intelligent systems and high-performance web applications.",
   openGraph: {
-    title: "Ashwanth | Full-Stack Developer",
+    title: "Ashwanth | AI/ML Developer",
     description: "Portfolio and technical case studies by Ashwanth.",
     url: siteUrl,
     siteName: "Ashwanth.dev",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashwanth | Full-Stack Developer",
+    title: "Ashwanth | AI/ML Developer",
     description: "Portfolio and technical case studies by Ashwanth.",
   },
 };

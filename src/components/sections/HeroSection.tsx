@@ -112,7 +112,7 @@ export function HeroSection() {
             <div className="hero-hexagon-shell relative w-full h-full transition-transform duration-500">
               <div className="hero-hexagon-image relative w-full h-full overflow-hidden m-auto p-1 rounded-[45%] bg-gradient-to-tr from-primary/10 to-primary/30 shadow-lg shadow-primary/25 group-hover:scale-105 transition-transform duration-700">
                 <Image
-                  src="/profile .png"
+                  src="/profile.png"
                   alt="Ashwanth Senthilkumar"
                   fill
                   sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 400px"
